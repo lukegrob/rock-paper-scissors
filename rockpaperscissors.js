@@ -23,23 +23,83 @@ function getComputerChoice()
 
 function getHumanChoice()
 {
-    let humanChoice = prompt("Make your choice: Rock, Paper, or Scissors","").trim().toLowerCase();
+    let theHumanChoice = prompt("Make your choice: Rock, Paper, or Scissors","").trim().toLowerCase();
     
-    switch(humanChoice)
+    switch(theHumanChoice)
     {
         case("rock"):
         case("paper"):
         case("scissors"):
             break;
         default:
-            humanChoice = "paper";
+            theHumanChoice = "paper";
     }
 
-    return humanChoice;
+    return theHumanChoice;
 }
 
-console.log(getComputerChoice());
-console.log(getHumanChoice());
+let humanScore = 0;
+let computerScore = 0;
+
+function playRound(humanChoice,computerChoice)
+{   
+    let roundMessage = "";
+    
+    if(humanChoice == computerChoice)
+    {
+        roundMessage = "DRAW!"
+    }
+    else if(humanChoice == "rock")
+    {
+        if(computerChoice == "paper")
+        {
+            roundMessage = "You Lose! Paper beats rock.";
+            computerScore++;
+        }
+        else if(computerChoice == "scissors")
+        {
+            roundMessage = "You Win! Rock beats scissors.";
+            humanScore++;
+        }
+        }
+    else if(humanChoice == "paper")
+        {
+        if(computerChoice == "rock")
+        {
+            roundMessage = "You Win! Paper beats rock.";
+            humanScore++;
+        }
+        else if(computerChoice == "scissors")
+            {
+                roundMessage = "You Lose! Scissors beats paper.";
+                computerScore++;
+            }
+        }
+    else if(humanChoice == "scissors")
+        {
+            if(computerChoice == "paper")
+            {
+                roundMessage = "You Win! Scissors beats paper.";
+                humanScore++;
+            }
+            else if(computerChoice == "rock")
+            {
+                roundMessage = "You Lose! Rock beats scissors.";
+                computerScore++;
+            }
+        }
+
+        //return roundMessage;
+        console.log(roundMessage);
+}
+
+const computerSelection = getComputerChoice();
+const humanSelection = getHumanChoice();
+
+playRound(humanSelection,computerSelection);
+
+console.log("Comp: " + computerScore);
+console.log("Human:" + humanScore);
 
 
 
