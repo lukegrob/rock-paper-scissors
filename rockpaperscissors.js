@@ -23,7 +23,7 @@ function getComputerChoice()
 
 function getHumanChoice()
 {
-    let theHumanChoice = prompt("Make your choice: Rock, Paper, or Scissors","").trim().toLowerCase();
+    let theHumanChoice = prompt(`Score: ${humanScore} : ${computerScore} || Make your choice: Rock, Paper, or Scissors`,"").trim().toLowerCase();
     
     switch(theHumanChoice)
     {
@@ -41,8 +41,30 @@ function getHumanChoice()
 let humanScore = 0;
 let computerScore = 0;
 
-function playRound(humanChoice,computerChoice)
-{   
+function playGame()
+{
+    while(humanScore+computerScore <5)
+    {
+        let computerSelection = getComputerChoice();
+        let humanSelection = getHumanChoice();
+        console.log(playRound(humanSelection,computerSelection));   
+    }
+        if(humanScore>computerScore)
+        {
+            bigResult = "-----YOU WON!-----";
+            
+        }
+        else{
+            bigResult = "-----YOU LOST!-----";
+        }
+
+        console.log(bigResult);
+        alert(bigResult);
+    
+
+    function playRound(humanChoice,computerChoice)
+    {   
+    
     let roundMessage = "";
     
     if(humanChoice == computerChoice)
@@ -89,21 +111,9 @@ function playRound(humanChoice,computerChoice)
             }
         }
 
-        //return roundMessage;
-        console.log(roundMessage);
+    return roundMessage;
+    }
+
 }
 
-const computerSelection = getComputerChoice();
-const humanSelection = getHumanChoice();
-
-playRound(humanSelection,computerSelection);
-
-console.log("Comp: " + computerScore);
-console.log("Human:" + humanScore);
-
-
-
-
-
-
-
+playGame();
