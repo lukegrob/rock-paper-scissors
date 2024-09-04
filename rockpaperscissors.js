@@ -5,7 +5,7 @@
 */
 function getComputerChoice()
 {   
-    let compChoice = Math.ceil(Math.random()*3);
+    let compChoice = Math.floor((Math.random()*3)+1);
     //console.log(compChoice);
     switch(compChoice)
     {
