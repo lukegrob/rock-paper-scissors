@@ -6,7 +6,7 @@ Click Rock/Paper/Scissors button
     determine round winner with comparisons
     update variables of score/round count
     update #roundScore
-    
+
     CHECK points COUNT
     IF player a or b has 5:
         update #gameStatus with who won/draw
@@ -32,6 +32,12 @@ const choiceContainer = document.querySelector("#choiceContainer");
 const btnRock = document.querySelector("#rock");
 const btnPaper = document.querySelector("#paper");
 const btnScissors = document.querySelector("#scissors");
+
+choiceContainer.addEventListener("click",function(e){
+    if(e.target !== choiceContainer) {
+        // alert(e.target.textContent);
+    }
+})
 
 const gameStatus = document.querySelector("#gameStatus");
 // gameStatus.innerText = "Round 0";
@@ -74,10 +80,6 @@ function getHumanChoice()
 
     return theHumanChoice;
 }
-
-// can i fire custom variable into click
-// i.e. rock button calls play function
-// with rock string?
 
 let humanScore = 0;
 let computerScore = 0;
