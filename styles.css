@@ -1,0 +1,49 @@
+header {
+    background-color: rgb(199, 199, 199);
+}   
+
+h1 {
+    padding: 10px;
+    margin:0px;
+}
+
+body {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    
+    /* height: 100dvh; */
+    
+    text-align:center;
+    font-family: roboto;
+    margin:0px;
+    padding:0px;
+}
+
+button {
+    font-family: 'roboto';
+    border-radius:5px;
+    padding:10px;
+}
+
+button#rock {
+    color:red;
+}
+
+button#paper {
+    color:green;
+}
+
+button#scissors {
+    color:blue;
+}
+
+#choiceContainer { 
+    display:flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+h2 {
+    font-size: 48px;
+}

@@ -23,6 +23,17 @@ run playround function:
 
 
 */
+
+//window.addEventListener("load", (event) => {
+//});
+
+//DOM Elements
+const choiceContainer = document.querySelector("#choiceContainer");
+const btnRock = document.querySelector("#rock");
+const btnPaper = document.querySelector("#paper");
+const btnScissors = document.querySelector("#scissors");
+
+
 function getComputerChoice()
 {   
     let compChoice = Math.floor((Math.random()*3)+1);
