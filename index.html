@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    <script src="rockpaperscissors.js"></script>
+    <script src="rockpaperscissors.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -16,12 +16,15 @@
     <header>
         <h1>Rock Paper Scissors</h1>
     </header>
-    <h2>0 - 0</h2>
-    <p>Make your choice to start the game:</p>
+    <h2 id = "roundScore">0 - 0</h2>
+    <p id="gameStatus">Make your choice to start the game:</p>
     <div id="choiceContainer">
         <button id="rock">Rock</button>
         <button id="paper">Paper</button>
         <button id="scissors">Scissors</button>
     </div>
+    <footer>
+        <a href="https://github.com/lukegrob">lukegrob.github.com</a>
+    </footer>
 </body>
 </html>

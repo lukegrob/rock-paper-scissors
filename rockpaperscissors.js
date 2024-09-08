@@ -1,24 +1,24 @@
 /*---PSEUDOCODE---
 Click Rock/Paper/Scissors button
-run playround function:
+=> run playround function:
     get player choice from btn id
     getComputerChoice()
     determine round winner with comparisons
     update variables of score/round count
+    update #roundScore
     
-    CHECK points COUNT.
+    CHECK points COUNT
     IF player a or b has 5:
-        update DOM score
-        replace "make choice" with who won/draw
+        update #gameStatus with who won/draw
         remove listeners from rock/paper/scissor
         / buttons
         add Reset/New Game button underneath
         / options? OR instead of choices
+        / modal popup maybe?
         / => refreshes all
     ELSE:
-        update DOM score
-        replace "make choice" with
-        / "paper beats rock etc"
+        update #gameStatus with 
+        / paper beats rock etc.
 
 
 
@@ -33,6 +33,12 @@ const btnRock = document.querySelector("#rock");
 const btnPaper = document.querySelector("#paper");
 const btnScissors = document.querySelector("#scissors");
 
+const gameStatus = document.querySelector("#gameStatus");
+// gameStatus.innerText = "Round 0";
+
+// window.onbeforeunload = function(event) {
+//     event.preventDefault();
+// };
 
 function getComputerChoice()
 {   
@@ -69,8 +75,21 @@ function getHumanChoice()
     return theHumanChoice;
 }
 
+// can i fire custom variable into click
+// i.e. rock button calls play function
+// with rock string?
+
 let humanScore = 0;
 let computerScore = 0;
+let roundCount = 0;
+
+function resetGame()
+{
+    // window.location.reload(); this would be naughty
+    humanScore = 0;
+    computerScore = 0;
+    roundCount = 0;
+}
 
 function playGame()
 {
@@ -146,5 +165,3 @@ function playGame()
     }
 
 }
-
-playGame();
