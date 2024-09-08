@@ -1,4 +1,24 @@
 /*---PSEUDOCODE---
+Click Rock/Paper/Scissors button
+run playround function:
+    get player choice from btn id
+    getComputerChoice()
+    determine round winner with comparisons
+    update variables of score/round count
+    
+    CHECK points COUNT.
+    IF player a or b has 5:
+        update DOM score
+        replace "make choice" with who won/draw
+        remove listeners from rock/paper/scissor
+        / buttons
+        add Reset/New Game button underneath
+        / options? OR instead of choices
+        / => refreshes all
+    ELSE:
+        update DOM score
+        replace "make choice" with
+        / "paper beats rock etc"
 
 
 
