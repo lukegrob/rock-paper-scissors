@@ -51,6 +51,18 @@ button {
     padding:10px;
 }
 
+#resetButton
+{
+    width:250px;
+    height:100px;
+    margin-top:50px;
+    align-self:center;
+}
+
+button:active{
+    background-color:grey;
+}
+
 button#rock {
     color:red;
 }
@@ -71,4 +83,5 @@ button#scissors {
 
 h2 {
     font-size: 48px;
+    margin-bottom:25px;
 }
